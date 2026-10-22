@@ -1,34 +1,36 @@
 # BLPVisualizer
 
-Bell-LaPadula (BLP) access control simulator for Lab 5, featuring 18 test cases.
+This is my Bell-LaPadula access control lab. It has 18 cases that show when a user is allowed or denied access to a file based on its security level.
 
-## Files
+## What's included
 
-- `BLP.py` — security levels, subjects, objects, and read/write rules.
-- `Cases.py` — implementation of all 18 cases.
-- `ScreenshotWalkthrough.py` — step through each case for console screenshots.
-- `verify_cases.py` — automated checks for all 18 cases.
+- `BLP.py` contains the Bell-LaPadula rules and keeps track of each user and file's security level.
+- `Cases.py` has all 18 lab cases.
+- `ScreenshotWalkthrough.py` runs one case at a time and pauses so I can take screenshots.
+- `verify_cases.py` checks that each case gives the expected result.
 
-## Run
+## Running the lab
 
-Requires Python 3.8 or later. No additional packages are needed.
+You'll need Python 3. No extra packages are required.
 
 ```bash
 python3 Cases.py
 ```
 
-Choose `1`–`18` to run a specific case, `A` to run all cases, or `Q` to exit.
+Enter a number from 1 to 18 to run that case, `A` to run every case, or `Q` to quit.
 
-To display each case and pause for screenshots:
+For screenshots, I also added a way to go through the cases one at a time:
 
 ```bash
 python3 ScreenshotWalkthrough.py
 ```
 
-To check the expected access decisions:
+Press Enter after capturing each case to move to the next one.
+
+To check the expected allow/deny results:
 
 ```bash
 python3 verify_cases.py
 ```
 
-Each case starts from the same initial subjects, objects, and security levels.
+Each case starts with the same original subjects, files, and security levels so the results don't affect each other.
